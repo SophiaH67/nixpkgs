@@ -380,7 +380,7 @@ let
     git
     beamPackages.elixir
     nodejs
-    postgresql_18
+    postgresql_14
     # formatting js file
     prettier
   ];
