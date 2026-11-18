@@ -210,8 +210,10 @@ in
             pkgs.postgresql_17
           else if versionAtLeast config.system.stateVersion "24.11" then
             pkgs.postgresql_16
-          else
+          else if versionAtLeast config.system.stateVersion "23.11" then
             pkgs.postgresql_15
+          else
+            pkgs.postgresql_14
         '';
         description = ''
           The package being used by postgresql.
@@ -666,7 +668,7 @@ in
           else if versionAtLeast config.system.stateVersion "23.11" then
             pkgs.postgresql_15
           else if versionAtLeast config.system.stateVersion "22.05" then
-            mkThrow "14"
+            pkgs.postgresql_14
           else if versionAtLeast config.system.stateVersion "21.11" then
             mkThrow "13"
           else if versionAtLeast config.system.stateVersion "20.03" then

@@ -184,7 +184,7 @@ Packages
           pkgs.emacs
         ];
 
-      services.postgresql.package = pkgs.postgresql_18;
+      services.postgresql.package = pkgs.postgresql_14;
     }
     ```
 
